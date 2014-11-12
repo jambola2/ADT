@@ -56,6 +56,7 @@ public class LinkedList {
 	}
 	
 	public void delete(LinkedListItem head, LinkedListItem remove){
+		// TODO Fix this function
 		if (!search(head, remove)){
 			// Checks if the item doesn't exist in the list
 			System.out.println("This LinkedListItem does not exist in this LinkedList");
