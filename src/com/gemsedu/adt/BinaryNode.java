@@ -1,4 +1,5 @@
 package com.gemsedu.adt;
+//Comment
 
 public class BinaryNode<T extends Comparable>  {
 	T data;
