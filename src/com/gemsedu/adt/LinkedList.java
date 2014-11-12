@@ -55,6 +55,24 @@ public class LinkedList {
 		
 	}
 	
+	public void delete(LinkedListItem head, LinkedListItem remove){
+		if (!search(head, remove)){
+			// Checks if the item doesn't exist in the list
+			System.out.println("This LinkedListItem does not exist in this LinkedList");
+		}
+		else{
+			if (head.value == remove.value){
+				// If the head itself is the value we want to remove
+				head = head.next ;
+				// Replace the head with the next item, skipping over this item
+			}
+			else{
+				//If the head is not the item we want to remove
+				delete(head.next, remove);
+			}
+		}
+	}
+	
 	public static void main(String[] args) {
 		LinkedList ll = new LinkedList();
 		LinkedListItem llItem = new LinkedListItem(2);
